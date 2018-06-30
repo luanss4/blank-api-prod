@@ -4,7 +4,7 @@ var Sequelize = require('sequelize');
 
 var db = null;
 
-module.exports = function(app){
+module.exports = app=>{
     if(!db){
         var config = app.src.libs.config;
         var sequelize = new Sequelize(
@@ -14,17 +14,17 @@ module.exports = function(app){
             config.params
         );
         db = {
-            sequelize:sequelize,
-            Sequelize:Sequelize,
+            sequelize,
+            Sequelize,
             models: {}
         };
         var dir = path.join(__dirname, "models");
-        fs.readdirSync(dir).forEach(function(file){
+        fs.readdirSync(dir).forEach(file=>{
             var modelDir = path.join(dir, file);
             var model = sequelize.import(modelDir);
             db.models[model.name] = model;
         });
-        Object.keys(db.models).forEach(function(key){
+        Object.keys(db.models).forEach(key=>{
             db.models[key].options.classMethods.associate(db.models);
         });
     }

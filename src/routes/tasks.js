@@ -1,5 +1,5 @@
-module.exports = function(app){
-    const Tasks = app.src.db.models.Tasks;
+module.exports = app => {
+    var Tasks = app.src.db.models.Tasks;
 
     app.route("/tasks")
         .get((req, resp) => {

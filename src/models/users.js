@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataType){
+module.exports = (sequelize, DataType)=>{
     var Users = sequelize.define('Users', {
         id: {
             type: DataType.INTEGER,
@@ -22,8 +22,8 @@ module.exports = function(sequelize, DataType){
         }
     }, {
         classMethods: {
-            associate: function(models){
-                Users.hasMany(models.Tasks);
+            associate: (models)=>{
+                Users.hasMany(models.Tasks)
             }
         }
     });

@@ -1,0 +1,36 @@
+{
+  "name": "blank-api",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js --presets es2015,stage-2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/luanss4/blank-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/luanss4/blank-api/issues"
+  },
+  "homepage": "https://gitlab.com/luanss4/blank-api#README",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "express": "^4.16.3",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}

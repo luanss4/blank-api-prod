@@ -1,7 +1,7 @@
 var bodyParser = require('body-parser')
 
 module.exports = app=>{
-    app.set("port", process.env.port || 3000)
+    app.set("port", process.env.PORT || 3000)
     app.use((req, resp, next) => {
         //Middleware de pre-execução das rotas
         if(req.body){

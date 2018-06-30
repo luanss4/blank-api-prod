@@ -9,4 +9,4 @@ consig()
     .then("src/libs/middlewares.js")
     .then("src/routes")
     .then("src/libs/boot.js")
-    .into(app)
+    .into(app);

@@ -1,5 +1,5 @@
-module.exports = function(app){
-    app.get('/', function(req, resp){
-        resp.json({status: "API Rodando!"});
-    });
+module.exports = app=>{
+    app.get('/', (req, resp)=>{
+        resp.json({status: "API Rodando!"})
+    })
 }

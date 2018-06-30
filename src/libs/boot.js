@@ -1,7 +1,7 @@
-module.exports = function(app) {
+module.exports = app => {
 
-    app.src.db.sequelize.sync().done(function() {
-        app.listen(app.get("port"), function(){
+    app.src.db.sequelize.sync().done(() => {
+        app.listen(app.get("port"), () => {
             console.log(`API Rodando na porta ${app.get("port")}`);
         });
     });
